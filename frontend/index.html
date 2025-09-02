@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TaskFlow - Gestor de Tareas</title>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <!-- Pantalla de Login -->
+  <!-- Pantalla de Login con Fondo de Video -->
   <div class="container" id="login-container">
-    <h1 class="title">TASKFLOW</h1>
-    <h2 class="subtitle">Iniciar Sesión</h2>
-    <input type="email" id="email" placeholder="Correo electrónico" required />
-    <input type="password" id="password" placeholder="Contraseña" required />
-    <button onclick="login()" class="btn-primary">Iniciar Sesión</button>
-    <p><a href="#" onclick="showRegister()">Regístrate</a></p>
+    <!-- Video de fondo -->
+    <video autoplay muted loop playsinline class="background-video">
+      <source src="assets/video.mp4" type="video/mp4">
+      Tu navegador no soporta video.
+    </video>
+
+    <!-- Contenido sobre el video -->
+    <div class="content-overlay">
+      <h1 class="title">TASKFLOW</h1>
+      <h2 class="subtitle">Iniciar Sesión</h2>
+      <input type="email" id="email" placeholder="Correo electrónico" required />
+      <input type="password" id="password" placeholder="Contraseña" required />
+      <button onclick="login()" class="btn-primary">Iniciar Sesión</button>
+      <p><a href="#" onclick="showRegister()">Regístrate</a></p>
+    </div>
   </div>
 
   <!-- Pantalla de Registro -->
@@ -71,4 +82,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>

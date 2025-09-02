@@ -193,3 +193,30 @@ button:hover {
     padding: 30px 20px;
   }
 }
+
+/* Video de fondo */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cubre todo el contenedor */
+  z-index: -1; /* Detrás del contenido */
+  filter: brightness(0.5) blur(2px); /* Oscurece y suaviza para mejor legibilidad */
+}
+
+/* Contenido sobre el video */
+.content-overlay {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+}
+
+/* Asegúrate de que el contenedor tenga posición relativa */
+.container {
+  position: relative;
+  overflow: hidden;
+  background: none; /* Elimina el fondo sólido */
+}
